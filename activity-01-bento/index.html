@@ -6,44 +6,295 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Bento Layout</title>
-  <style>
-    .card {
-      height: 200px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Petal &amp; Co. | Flower Studio</title>
 </head>
 
-<body>
+<body id="top">
+
   <div class="container-fluid">
-    <div class="row mt-3 mb-3">
-      <div class="col-8">
-        <div class="card p-1"></div>
-      </div>
-      <div class="col-4">
-        <div class="card p-1"></div>
+    <header class="site-nav">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#top">Petal &amp; Co.</a>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#bestsellers">Collections</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="#custom">Custom order</a>
+      </nav>
+    </header>
+
+    <div class="row mt-3 mb-3 first-row">
+      <div class="col-12 mb-3">
+        <div class="card hero">
+          <h1>Petal &amp; Co. Flower Studio</h1>
+          <h3>Flowers for every little moment.</h3>
+          <p>Handcrafted bouquets to celebrate the big days,
+            the small wins, and everything in between.</p>
+          <p>Made with love, wrapped with care, and delivered with a little joy.</p>
+          <a class="btn-pill" href="#bestsellers">Shop bestsellers <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
 
-    <div class="row mt-3 mb-3">
-      <div class="col-4">
-        <div class="card p-1"></div>
+    <div class="row mt-3 mb-3 second-row">
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card bg-rose h-100">
+          <h3><a href="#bestsellers">Our bestsellers</a></h3>
+          <p>The bouquets everyone keeps coming back for.</p>
+        </div>
       </div>
-      <div class="col-8">
-        <div class="card p-1"></div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card bg-wine h-100">
+          <h3><a href="#about"">Our story</a></h3>
+          <p>Small details, thoughtful arrangements, and flowers with meaning.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card bg-kraft h-100">
+          <h3><a href="#catalog">Flower collection</a></h3>
+          <p>Explore blooms for your favorite colors and occasions.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card bg-blush h-100">
+          <h3><a href="#custom">Custom bouquets</a></h3>
+          <p>Your colors, your flowers, your story. Let's make it personal.</p>
+        </div>
       </div>
     </div>
 
-    <div class="row mt-3 mb-3">
-      <div class="col-8">
-        <div class="card p-1"></div>
+    <div class="row mt-3 mb-3" id="bestsellers">
+      <div class="col-12 mb-3">
+        <div class="card bg-wine">
+          <h2>Little things in bloom</h2>
+          <p>Meet the bouquets made to brighten someone's day.</p>
+        </div>
       </div>
-      <div class="col-4">
-        <div class="card p-1"></div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card product bg-blush h-100">
+          <img src="https://i.pinimg.com/1200x/33/e5/58/33e55858779cd0ca3d3fde6d24e4c2aa.jpg"
+            alt="Pink roses arranged in a bouquet">
+          <div class="product-body">
+            <p class="eyebrow">Bestseller 01</p>
+            <h3>Little Daydream</h3>
+            <p>White flowers with delicate wrapping for the sweetest surprises.</p>
+            <p class="price">₱850</p>
+            <p class="meta">romantic · soft · timeless</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card product bg-blush h-100">
+          <img src="https://i.pinimg.com/736x/90/49/00/904900eeac06d213d5a34db384304e37.jpg"
+            alt="Purple and white flower bouquet">
+          <div class="product-body">
+            <p class="eyebrow">Fresh Pick 02</p>
+            <h3>Lavender Haze</h3>
+            <p>Dreamy purple and white blooms for the ones who love a little magic.</p>
+            <p class="price">₱720</p>
+            <p class="meta">bright · happy · playful</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card product bg-blush h-100">
+          <img src="https://i.pinimg.com/1200x/76/41/0e/76410e7dd0f7f9004bf812b67b8903ad.jpg"
+            alt="Purple flowers in a floral arrangement">
+          <div class="product-body">
+            <p class="eyebrow">Studio Favorite 03</p>
+            <h3>Floral Fantasy</h3>
+            <p>A lovely mix of seasonal flowers for an ordinary day worth celebrating.</p>
+            <p class="price">₱950</p>
+            <p class="meta">dreamy · delicate · whimsical</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="card product bg-blush h-100">
+          <img src="https://i.pinimg.com/736x/39/61/b0/3961b0a5526d6d85c1c00cd9f87b6d33.jpg"
+            alt="Cheerful mixed flower bouquet">
+          <div class="product-body">
+            <p class="eyebrow">Everyday Blooms 04</p>
+            <h3>Sunny Side</h3>
+            <p>Cheerful blooms in sunny shades for brighter days and new beginnings.</p>
+            <p class="price">₱650</p>
+            <p class="meta">sweet · simple · thoughtful</p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="row mt-3 mb-3 third-row" id="catalog">
+
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card bg-wine h-100">
+          <p class="eyebrow">Our Philosophy</p>
+          <h2>Flowers for every occasion</h2>
+          <p>Some moments deserve more than words. Let flowers do the talking.</p>
+          <hr>
+          <p class="list-line">01 / Birthdays &amp; milestones</p>
+          <p class="list-line">02 / Anniversaries &amp; celebrations</p>
+          <p class="list-line">03 / Thank-yous &amp; congratulations</p>
+          <p class="list-line">04 / Just because</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card bg-rose h-100">
+          <p class="eyebrow">The Petal Promise</p>
+          <h2>Thoughtfully arranged</h2>
+          <p>Every bouquet is prepared with care, from the blooms we select to the finishing touches on every wrap.</p>
+          <hr>
+          <h4 class="item-title">✿ Carefully selected blooms</h4>
+          <p>We choose flowers with color, texture, and balance in mind.</p>
+          <h4 class="item-title">✿ Ready for gifting</h4>
+          <p>Thoughtful wrapping makes every arrangement feel extra special.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-12 col-lg-4 mb-3">
+        <div class="card bg-kraft h-100">
+          <p class="eyebrow">A Note From Our Florists</p>
+          <h2>Keep your flowers happy</h2>
+          <p>A little care goes a long way. Here's how to enjoy your blooms for longer.</p>
+          <hr>
+          <h4 class="item-title">01 — Fresh water</h4>
+          <p>Change the water every day or two.</p>
+          <h4 class="item-title">02 — Trim the stems</h4>
+          <p>Cut stems diagonally before placing them in water.</p>
+          <h4 class="item-title">03 — Find a cool spot</h4>
+          <p>Keep flowers away from direct sunlight and excess heat.</p>
+          <h4 class="item-title">04 — Keep it clean</h4>
+          <p>Remove wilted leaves and petals as needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-3" id="about">
+      <div class="col-12 col-md-7 mb-3">
+        <div class="card bg-kraft h-100">
+          <p class="eyebrow">A Little Note About Us</p>
+          <h2>More than just flowers.</h2>
+          <p>Petal &amp; Co. was created around one simple idea: the smallest gestures can mean the most.</p>
+          <p>From carefully chosen blooms to the final ribbon,
+            we believe every bouquet should feel personal.
+            Whether you're celebrating someone special or treating yourself,
+            we're here to help you make the moment bloom.</p>
+          <p><strong>Little moments. Lovely blooms. Lasting memories.</strong></p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-5 mb-3">
+        <div class="card bg-wine h-100" id="reviews">
+          <p class="eyebrow">Kind Words / 001</p>
+          <h2>A little love note</h2>
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>
+            "The bouquet was so lovely! The colors were beautiful,
+            and the wrapping made it feel extra special."
+          </p>
+          <p><strong>— A happy customer</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-3" id="custom">
+      <div class="col-12">
+        <div class="card bg-blush">
+          <p class="eyebrow">Made With You In Mind / 002</p>
+          <h2>Your flowers, your way.</h2>
+          <p>
+            Have a certain color palette, favorite flower, or special occasion
+            in mind? Let's create a bouquet that feels like you.
+          </p>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <i class="bi bi-palette"></i>
+              </span>
+              <div class="step-text">
+                <h4 class="item-title">1. Choose your colors</h4>
+                <p>Soft pastels, bold brights, or something in between.</p>
+              </div>
+            </li>
+
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <i class="bi bi-calendar-heart"></i>
+              </span>
+              <div class="step-text">
+                <h4 class="item-title">2. Tell us the occasion</h4>
+                <p>Birthdays, anniversaries, graduations, or no reason at all.</p>
+              </div>
+            </li>
+
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <i class="bi bi-heart"></i>
+              </span>
+              <div class="step-text">
+                <h4 class="item-title">3. Make it personal</h4>
+                <p>Add a little message to make your gift more meaningful.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-3" id="contact">
+      <div class="col-12 col-md-6 mb-3">
+        <div class="card bg-kraft h-100">
+          <p class="eyebrow">Let's Keep In Touch</p>
+          <h2>Say hello!</h2>
+          <p>Questions, custom requests, or just want to talk flowers? We'd love to hear from you.</p>
+          <p class="list-line">Email: hello@petalandco.example</p>
+          <p class="list-line">Instagram: @petalandco.flowers</p>
+          <p class="list-line">Location: Your neighborhood flower studio</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 mb-3">
+        <div class="card bg-rose h-100">
+          <p class="eyebrow">Before You Order</p>
+          <h2>A few little reminders</h2>
+          <h4 class="item-title">Custom orders</h4>
+          <p>We recommend placing requests 2–3 days ahead.</p>
+          <h4 class="item-title">Flower availability</h4>
+          <p>Some blooms may vary depending on the season.</p>
+          <h4 class="item-title">Made with care</h4>
+          <p>Every arrangement may have small natural variations.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h4>Petal &amp; Co.</h4>
+      <p>Flowers for every little moment.</p>
+      <p>
+        <a href="#bestsellers">Bestsellers</a> ·
+        <a href="#about">Our story</a> ·
+        <a href="#catalog">Collections</a> ·
+        <a href="#contact">Contact</a>
+      </p>
+      <p>&copy; 2026 Petal &amp; Co. Flower Studio. All rights reserved.</p>
+    </footer>
   </div>
 
 </body>
-
 </html>
