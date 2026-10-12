@@ -351,30 +351,5 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 991px) {
-    .steps { grid-template-columns: 1fr; row-gap: 1.5rem; }
-    .step, .step:first-child, .step:last-child { padding: 0; }
-    .step + .step { border-left: 0; border-top: 1px solid rgba(74, 17, 34, .22); padding-top: 1.5rem; }
-}
-
-@media (max-width: 767px) {
-    .site-nav nav { grid-template-columns: 1fr; justify-items: center; row-gap: .7rem; }
-    .site-nav .brand { justify-self: center; }
-    .site-nav ul { gap: 1.3rem; }
-    .site-nav .nav-cta { display: none; }
-    .first-row .hero h1,
-    .first-row .hero p { max-width: 100%; }
-    .third-row .card { min-height: 0; }
-}
-
-@media (max-width: 575px) {
-    .site-nav ul { gap: 1rem; }
-    .first-row .hero {
-        background-image:
-            linear-gradient(180deg, rgba(52, 9, 24, .8) 0%, rgba(52, 9, 24, .62) 100%),
-            url("https://i.pinimg.com/1200x/33/e5/58/33e55858779cd0ca3d3fde6d24e4c2aa.jpg");
-    }
-}
-
 a:focus-visible { outline: 3px solid var(--wine); outline-offset: 3px; }
 .bg-wine a:focus-visible, .hero a:focus-visible, footer a:focus-visible { outline-color: var(--blush); }
