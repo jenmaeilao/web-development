@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PackPlanner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page container-xl">
+
+    <!-- HERO + NAV -->
+    <header class="hero" id="top">
+      <div class="nav-shell">
+        <nav class="navbar navbar-expand-lg navbar-dark site-nav" id="siteNav" aria-label="Main">
+          <a class="navbar-brand logo d-flex align-items-center gap-2" href="#top">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> <span>pack</span>planner
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+            aria-controls="menu" aria-expanded="false" aria-label="Toggle menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto gap-lg-1 py-2 py-lg-0">
+              <li class="nav-item"><button class="nav-btn active" data-go="top"> Dashboard</button></li>
+              <li class="nav-item"><button class="nav-btn" data-go="plan"> Trip setup</button></li>
+              <li class="nav-item"><button class="nav-btn" data-go="list"> My list</button></li>
+              <li class="nav-item"><button class="nav-btn" data-go="addSec"> Add section</button></li>
+              <li class="nav-item"><button class="nav-btn" data-go="dates"> Dates</button></li>
+            </ul>
+            <button class="btn btn-light btn-pill" id="btnReset" type="button">
+              <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Start over
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-copy px-3 px-md-4">
+        <h1 id="greeting"></h1>
+        <p id="greetSub"></p>
+      </div>
+    </header>
+
+    <!-- FLOATING BAR: name, search, dates -->
+    <div class="planner" role="search">
+      <div class="row g-2 align-items-center">
+        <div class="col-6 col-lg">
+          <label class="field" for="nameInput">
+            <i class="bi bi-person" aria-hidden="true"></i>
+            <span><small>Your name</small>
+              <input id="nameInput" maxlength="20" placeholder="Type your name" autocomplete="given-name"></span>
+          </label>
+        </div>
+        <div class="col-6 col-lg">
+          <label class="field" for="search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <span><small>Search</small>
+              <input id="search" type="search" placeholder="Search your list"></span>
+          </label>
+        </div>
+        <div class="col-12 col-lg">
+          <button type="button" class="field text-start border-0" data-go="dates">
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
+            <span><small>Trip dates</small><b id="barDates">Pick your dates</b></span>
+          </button>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <button class="btn btn-dark btn-go w-100" type="button" data-go="list" aria-label="Go to my list">
+            <i class="bi bi-arrow-down" aria-hidden="true"></i><span class="ms-2 d-lg-none">Go to my list</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-0">
+      <main class="col-lg-8 center">
+
+        <section class="block" id="plan">
+          <div class="row-h">
+            <h2>Trip type</h2><span class="step-tag">Steps 1 and 2</span>
+          </div>
+          <div class="tabs" id="travelTabs" role="group" aria-label="Travel type"></div>
+          <div class="trip-track" id="tripTrack"></div>
+        </section>
+
+        <section class="block" id="list">
+          <div class="row-h">
+            <h2>Packing list</h2><span class="step-tag">Step 3</span>
+          </div>
+          <p class="sub" id="listSub"></p>
+          <div id="doneBanner"></div>
+          <div class="cat-grid" id="catGrid"></div>
+        </section>
+
+        <section class="block add-sec" id="addSec">
+          <h2>Add a new section</h2>
+          <p class="sub">Create your own category, like Makeup, Pets or Work gear.</p>
+          <form id="secForm" class="sec-form">
+            <div class="icon-pick" id="iconPick" role="radiogroup" aria-label="Section icon"></div>
+            <input class="in grow" id="secName" maxlength="30" placeholder="Section name, e.g. Makeup" aria-label="Section name">
+            <button class="btn-p" type="submit">Add section</button>
+          </form>
+          <div class="chips" id="chips"></div>
+          <p class="note" id="secMsg" role="status"></p>
+        </section>
+      </main>
+
+      <aside class="col-lg-4">
+        <div class="right">
+          <div class="profile">
+            <span class="avatar" id="avatar">?</span>
+            <div>
+              <strong id="profileName">Traveler</strong>
+              <div class="sub" id="profileSub"></div>
+            </div>
+          </div>
+
+          <h3 id="dates">Available Dates</h3>
+          <div class="cal" id="calendar"></div>
+          <div class="tl" id="timeline"></div>
+
+          <h3>Quick sections</h3>
+          <div class="tiles" id="tiles"></div>
+
+          <h3>Packing progress</h3>
+          <div class="pcard">
+            <div class="pc-top"><span>PackPlanner</span><span id="pcDays"></span></div>
+            <div class="pc-big" id="bigPct">0%</div>
+            <div class="pc-bar"><span id="barFill"></span></div>
+            <div class="pc-foot"><span id="packText"></span><span id="docsText"></span></div>
+          </div>
+
+          <div class="promo">
+            <p>Need a <b>Makeup</b>, Pets or Work section? <b>Customize</b> your list now.</p>
+            <button class="btn-p" type="button" data-go="addSec">Add a section</button>
+          </div>
+          <p class="note">Nothing is saved. Refreshing starts a new list.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
