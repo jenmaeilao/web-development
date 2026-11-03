@@ -1,214 +1,405 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore NASA imagery and create your own planets with CosmoView." />
-    <title>CosmoView — Explore Beyond the Ordinary</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/script.js" defer></script>
-    <script src="./assets/js/planet-explorer.js" defer></script>
-    <script src="./assets/js/planet-comparison.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <button class="brand" data-page="home" aria-label="CosmoView home">
-          <span class="brand-orbit"><span></span></span>
-          <span>Cosmo<span>View</span></span>
-        </button>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"><span></span><span></span></button>
-        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-          <button class="active" data-page="home">Home</button>
-          <button data-page="apod">Picture of the Day</button>
-          <button data-page="explore">Explore</button>
-          <button data-page="planet-explorer">Planets</button>
-          <button data-page="planet-comparison">Compare</button>
-          <button data-page="studio">Planet Studio</button>
-          <button data-page="discoveries">My Discoveries <span class="count" id="saved-count">0</span></button>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore NASA imagery and create your own planets with CosmoView." />
+  <title>CosmoView — Explore Beyond the Ordinary</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/planet-explorer.js" defer></script>
+  <script src="./assets/js/planet-comparison.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <button class="brand" data-page="home" aria-label="CosmoView home">
+        <span class="brand-orbit"><span></span></span>
+        <span>Cosmo<span>View</span></span>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"><span></span><span></span></button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <button class="active" data-page="home">Home</button>
+        <button data-page="apod">Picture of the Day</button>
+        <button data-page="explore">Explore</button>
+        <button data-page="planet-explorer">Planets</button>
+        <button data-page="planet-comparison">Compare</button>
+        <button data-page="studio">Planet Studio</button>
+        <button data-page="discoveries">My Discoveries <span class="count" id="saved-count">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-view active home" id="home">
+      <section class="hero">
+        <img class="hero-bg" src="https://images-assets.nasa.gov/image/PIA12348/PIA12348~orig.jpg"
+          alt="Earth rising over the lunar horizon" />
+        <div class="hero-vignette"></div>
+        <div class="container hero-content">
+          <span class="eyebrow">✦ Your window to the cosmos</span>
+          <h1>Explore Beyond<br />the <em>Ordinary.</em></h1>
+          <p>Discover breathtaking worlds, ancient galaxies, and the stories written across the stars. The universe is
+            waiting.</p>
+          <div class="hero-actions">
+            <button class="btn-cosmo" data-page="explore">Explore the universe <span>→</span></button>
+            <button class="text-action" data-page="studio"><span>Create a planet</span> ◯</button>
+          </div>
+        </div>
+        <div class="scroll-hint"><span></span>Scroll to discover</div>
+      </section>
+      <section class="editorial-section home-intro">
+        <div class="container editorial-grid">
+          <div class="section-index"><span>01</span><i></i></div>
+          <div class="editorial-copy">
+            <span class="eyebrow">Begin your journey</span>
+            <h2>The universe,<br><em>closer than ever.</em></h2>
+            <p>CosmoView brings the beauty and science of space to your screen. Follow real NASA discoveries, encounter
+              distant worlds, and create a planet born from your own imagination.</p>
+            <button class="editorial-link" data-page="explore">Enter the archive →</button>
+          </div>
+          <div class="image-composition">
+            <img class="composition-main" src="https://images-assets.nasa.gov/image/PIA04921/PIA04921~orig.jpg"
+              alt="The Andromeda Galaxy">
+            <img class="composition-small" src="https://images-assets.nasa.gov/image/PIA17182/PIA17182~orig.jpg"
+              alt="Pillars of Creation">
+            <span class="image-caption">Andromeda Galaxy<br>NASA / JPL-Caltech</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section explore-cosmoview">
+        <div class="container">
+          <div class="section-index"><span>02</span><i></i><small>Explore CosmoView</small></div>
+          <div class="home-destinations">
+            <button class="destination destination-explorer" data-page="apod">
+              <span class="destination-number">01</span>
+              <span class="destination-copy"><small>Daily cosmic wonder</small>
+                <h3>Picture of the Day</h3>
+                <p>Discover a remarkable view of our universe, selected each day by NASA astronomers.</p><b>View today’s
+                  picture →</b>
+              </span>
+            </button>
+            <button class="destination destination-archive" data-page="explore">
+              <span class="destination-number">02</span>
+              <span class="destination-copy"><small>NASA image archive</small>
+                <h3>Explore the Universe</h3>
+                <p>Search across planets, galaxies, nebulae, stars, and historic space missions.</p><b>Enter the archive
+                  →</b>
+              </span>
+            </button>
+            <button class="destination destination-studio" data-page="studio">
+              <span class="destination-number">03</span>
+              <span class="destination-copy"><small>Worldbuilding laboratory</small>
+                <h3>Planet Studio</h3>
+                <p>Shape, name, and save a fictional world of your own.</p><b>Create a world →</b>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section featured-world">
+        <div class="container">
+          <div class="section-index"><span>03</span><i></i><small>Featured celestial body</small></div>
+          <div class="featured-world-layout">
+            <div class="featured-planet"><img src="https://images-assets.nasa.gov/image/PIA11141/PIA11141~orig.jpg"
+                alt="Saturn and its rings"></div>
+            <div class="featured-copy"><span class="eyebrow">The ringed world</span>
+              <h2>Saturn</h2>
+              <p>A giant composed mostly of hydrogen and helium, encircled by billions of fragments of ice and rock.
+                Saturn’s quiet beauty conceals one of the most complex planetary systems we know.</p><button
+                class="editorial-link" data-page="planet-explorer">Explore planet →</button>
+            </div>
+            <div class="featured-stats">
+              <div><span>Diameter</span><strong>116,460 km</strong></div>
+              <div><span>Known moons</span><strong>274</strong></div>
+              <div><span>Solar orbit</span><strong>29.45 years</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section cosmic-highlights">
+        <div class="container">
+          <div class="section-index"><span>04</span><i></i><small>Cosmic highlights</small></div>
+          <div class="section-title-row">
+            <div>
+              <h2>Stories written<br>in starlight.</h2>
+            </div>
+            <p>A selection of celestial landmarks captured across decades of human exploration.</p>
+          </div>
+          <div class="editorial-gallery">
+            <button class="highlight-large" data-page="apod"><img
+                src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000405/GSFC_20171208_Archive_e000405~orig.jpg"
+                alt="Carina Nebula"><span><small>Stellar nursery</small>Carina Nebula</span></button>
+            <button data-page="explore"><img src="https://images-assets.nasa.gov/image/PIA22946/PIA22946~orig.jpg"
+                alt="Jupiter"><span><small>Gas giant</small>Jupiter in detail</span></button>
+            <button data-page="explore"><img
+                src="https://images-assets.nasa.gov/image/as11-44-6552/as11-44-6552~orig.jpg"
+                alt="Earth above the Moon"><span><small>Apollo archive</small>Lunar horizon</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section solar-showcase">
+        <div class="container">
+          <div class="section-index"><span>05</span><i></i><small>Our neighborhood</small></div>
+          <div class="section-title-row">
+            <div>
+              <h2>Eight worlds.<br>One star.</h2>
+            </div><button class="editorial-link" data-page="planet-explorer">Open Planet Explorer →</button>
+          </div>
+          <div class="home-planet-line" id="home-planets"><span class="home-data-loading">Mapping the Solar
+              System…</span></div>
+        </div>
+      </section>
+
+      <section class="home-closing">
+        <img src="https://images-assets.nasa.gov/image/PIA12348/PIA12348~orig.jpg" alt="A distant world in space">
+        <div class="home-closing-shade"></div>
+        <div class="container"><span class="eyebrow">The journey continues</span>
+          <blockquote>There is always<br>more to discover.</blockquote><button class="btn-cosmo"
+            data-page="explore">Explore the universe →</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="page-view page-section apod-page" id="apod">
+      <div class="container">
+        <div class="page-heading"><span class="eyebrow">✦ A new view every day</span>
+          <h1>Astronomy Picture of the Day</h1>
+          <p>A daily window into our universe, selected by NASA astronomers.</p>
+        </div>
+        <form class="date-row" id="apod-date-form">
+          <label for="apod-date">Journey to a date</label>
+          <div class="date-controls">
+            <button type="button" class="date-step" id="apod-previous" aria-label="Previous day">←</button>
+            <input id="apod-date" type="date" min="1995-06-16" />
+            <button type="button" class="date-step" id="apod-next" aria-label="Next day">→</button>
+            <button type="submit" class="date-search">Show picture</button>
+          </div>
+        </form>
+        <p class="apod-status" id="apod-status" aria-live="polite"></p>
+        <div class="api-state" id="apod-feedback" hidden>
+          <strong id="apod-feedback-title">Unable to load this picture</strong>
+          <p id="apod-feedback-message">NASA’s archive could not be reached.</p>
+          <button class="btn-cosmo secondary" id="apod-retry" type="button">Retry</button>
+        </div>
+        <article class="apod-card" id="apod-card">
+          <button class="apod-image" id="apod-image-button"><img id="apod-image" alt="" /><span
+              class="expand-label">View full image</span></button>
+          <div class="apod-copy">
+            <div class="meta" id="apod-meta"></div>
+            <h2 id="apod-title"></h2>
+            <div class="rich-description" id="apod-description"></div><a class="media-source" id="apod-source"
+              target="_blank" rel="noopener noreferrer" hidden>View video on NASA ↗</a><button
+              class="btn-cosmo secondary" id="save-apod">♡ Save discovery</button>
+          </div>
+        </article>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <div class="page-view active" id="home">
-        <section class="hero">
-          <img class="hero-bg" src="https://images-assets.nasa.gov/image/PIA12348/PIA12348~orig.jpg" alt="Earth rising over the lunar horizon" />
-          <div class="hero-vignette"></div>
-          <div class="container hero-content">
-            <span class="eyebrow">✦ Your window to the cosmos</span>
-            <h1>Explore Beyond<br />the <em>Ordinary.</em></h1>
-            <p>Discover breathtaking worlds, ancient galaxies, and the stories written across the stars. The universe is waiting.</p>
-            <div class="hero-actions">
-              <button class="btn-cosmo" data-page="explore">Explore the universe <span>→</span></button>
-              <button class="text-action" data-page="studio"><span>Create a planet</span> ◯</button>
-            </div>
-          </div>
-          <div class="scroll-hint"><span></span>Scroll to discover</div>
-        </section>
-        <section class="editorial-section home-intro">
-          <div class="container editorial-grid">
-            <div class="section-index"><span>01</span><i></i></div>
-            <div class="editorial-copy">
-              <span class="eyebrow">Begin your journey</span>
-              <h2>The universe,<br><em>closer than ever.</em></h2>
-              <p>CosmoView brings the beauty and science of space to your screen. Follow real NASA discoveries, encounter distant worlds, and create a planet born from your own imagination.</p>
-              <button class="editorial-link" data-page="explore">Enter the archive →</button>
-            </div>
-            <div class="image-composition">
-              <img class="composition-main" src="https://images-assets.nasa.gov/image/PIA04921/PIA04921~orig.jpg" alt="The Andromeda Galaxy">
-              <img class="composition-small" src="https://images-assets.nasa.gov/image/PIA17182/PIA17182~orig.jpg" alt="Pillars of Creation">
-              <span class="image-caption">Andromeda Galaxy<br>NASA / JPL-Caltech</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="editorial-section featured-world">
-          <div class="container">
-            <div class="section-index"><span>02</span><i></i><small>Featured celestial body</small></div>
-            <div class="featured-world-layout">
-              <div class="featured-planet"><img src="https://images-assets.nasa.gov/image/PIA11141/PIA11141~orig.jpg" alt="Saturn and its rings"></div>
-              <div class="featured-copy"><span class="eyebrow">The ringed world</span><h2>Saturn</h2><p>A giant composed mostly of hydrogen and helium, encircled by billions of fragments of ice and rock. Saturn’s quiet beauty conceals one of the most complex planetary systems we know.</p><button class="editorial-link" data-page="planet-explorer">Explore planet →</button></div>
-              <div class="featured-stats"><div><span>Diameter</span><strong>116,460 km</strong></div><div><span>Known moons</span><strong>274</strong></div><div><span>Solar orbit</span><strong>29.45 years</strong></div></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="editorial-section cosmic-highlights">
-          <div class="container">
-            <div class="section-title-row"><div><span class="eyebrow">03 / Cosmic highlights</span><h2>Stories written<br>in starlight.</h2></div><p>A selection of celestial landmarks captured across decades of human exploration.</p></div>
-            <div class="editorial-gallery">
-              <button class="highlight-large" data-page="apod"><img src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000405/GSFC_20171208_Archive_e000405~orig.jpg" alt="Carina Nebula"><span><small>Stellar nursery</small>Carina Nebula</span></button>
-              <button data-page="explore"><img src="https://images-assets.nasa.gov/image/PIA22946/PIA22946~orig.jpg" alt="Jupiter"><span><small>Gas giant</small>Jupiter in detail</span></button>
-              <button data-page="explore"><img src="https://images-assets.nasa.gov/image/as11-44-6552/as11-44-6552~orig.jpg" alt="Earth above the Moon"><span><small>Apollo archive</small>Lunar horizon</span></button>
-            </div>
-          </div>
-        </section>
-
-        <section class="editorial-section solar-showcase">
-          <div class="container">
-            <div class="section-title-row"><div><span class="eyebrow">04 / Our neighborhood</span><h2>Eight worlds.<br>One star.</h2></div><button class="editorial-link" data-page="planet-explorer">Open Planet Explorer →</button></div>
-            <div class="home-planet-line" id="home-planets"><span class="home-data-loading">Mapping the Solar System…</span></div>
-          </div>
-        </section>
-
-        <section class="editorial-section explore-cosmoview">
-          <div class="container">
-            <div class="section-index"><span>05</span><i></i><small>Explore CosmoView</small></div>
-            <div class="home-destinations">
-              <button data-page="planet-explorer"><span>01</span><h3>Planet Explorer</h3><p>Discover the science and stories of all eight planets.</p><b>→</b></button>
-              <button data-page="planet-comparison"><span>02</span><h3>Planet Comparison</h3><p>Compare the scale and properties of neighboring worlds.</p><b>→</b></button>
-              <button data-page="studio"><span>03</span><h3>Planet Studio</h3><p>Shape, name, and save a fictional world of your own.</p><b>→</b></button>
-            </div>
-          </div>
-        </section>
-
-        <section class="home-closing">
-          <img src="https://images-assets.nasa.gov/image/PIA12348/PIA12348~orig.jpg" alt="A distant world in space">
-          <div class="home-closing-shade"></div>
-          <div class="container"><span class="eyebrow">The journey continues</span><blockquote>There is always<br>more to discover.</blockquote><button class="btn-cosmo" data-page="explore">Explore the universe →</button></div>
-        </section>
+    <section class="page-view page-section" id="explore">
+      <div class="container">
+        <div class="page-heading"><span class="eyebrow">✦ NASA image archive</span>
+          <h1>Explore the Universe</h1>
+          <p>Search across galaxies, planets, nebulae, and decades of human discovery.</p>
+        </div>
+        <form class="search-bar" id="search-form"><span>⌕</span><input id="search-input"
+            placeholder="Search nebulae, planets, missions..." aria-label="Search NASA images" /><button
+            type="submit">Search the cosmos</button></form>
+        <div class="quick-searches"><span>Try:</span><button data-query="Mars">Mars</button><button
+            data-query="James Webb">James Webb</button><button data-query="Nebula">Nebula</button><button
+            data-query="Apollo">Apollo</button></div>
+        <div class="results-summary" id="results-summary" aria-live="polite"></div>
+        <div class="gallery-grid" id="gallery"></div>
+        <div class="api-state" id="explore-feedback" hidden><strong id="explore-feedback-title"></strong>
+          <p id="explore-feedback-message"></p><button class="btn-cosmo secondary" id="explore-retry"
+            type="button">Retry search</button>
+        </div>
+        <nav class="pagination-cosmo" id="explore-pagination" aria-label="Explore results pages"></nav>
       </div>
+    </section>
 
-      <section class="page-view page-section apod-page" id="apod">
-        <div class="container">
-          <div class="page-heading"><span class="eyebrow">✦ A new view every day</span><h1>Astronomy Picture of the Day</h1><p>A daily window into our universe, selected by NASA astronomers.</p></div>
-          <form class="date-row" id="apod-date-form">
-            <label for="apod-date">Journey to a date</label>
-            <div class="date-controls">
-              <button type="button" class="date-step" id="apod-previous" aria-label="Previous day">←</button>
-              <input id="apod-date" type="date" min="1995-06-16" />
-              <button type="button" class="date-step" id="apod-next" aria-label="Next day">→</button>
-              <button type="submit" class="date-search">Show picture</button>
+    <section class="page-view page-section" id="planet-explorer">
+      <div class="container">
+        <div class="page-heading"><span class="eyebrow">✦ Solar system atlas</span>
+          <h1>Planet Explorer</h1>
+          <p>Meet the eight worlds that orbit our Sun.</p>
+        </div>
+        <div id="planet-catalog-view">
+          <div class="planet-search"><span>⌕</span><input id="planet-search-input" type="search"
+              placeholder="Find a planet…" aria-label="Search planets" /></div>
+          <div class="planet-catalog" id="planet-catalog">
+            <div class="gallery-loading">Loading planetary atlas…</div>
+          </div>
+          <div class="api-state" id="planet-data-error" hidden><strong>Unable to load planet data</strong>
+            <p>Check that planets.json is saved beside index.html.</p><button class="btn-cosmo secondary"
+              id="planet-data-retry">Retry</button>
+          </div>
+        </div>
+        <article class="planet-detail-view" id="planet-detail-view" hidden></article>
+      </div>
+    </section>
+
+    <section class="page-view page-section" id="planet-comparison">
+      <div class="container">
+        <div class="page-heading"><span class="eyebrow">✦ Planetary laboratory</span>
+          <h1>Planet Comparison</h1>
+          <p>Compare the scale and physical properties of two or three worlds.</p>
+        </div>
+        <div class="comparison-controls">
+          <label>Planet one<select id="compare-1"></select></label>
+          <label>Planet two<select id="compare-2"></select></label>
+          <label>Planet three <span>Optional</span><select id="compare-3"></select></label>
+          <button class="btn-cosmo" id="compare-button">Compare planets</button>
+          <button class="icon-action" id="compare-reset">Reset</button>
+        </div>
+        <p class="comparison-message" id="comparison-message" aria-live="polite"></p>
+        <div class="comparison-grid" id="comparison-results"></div>
+      </div>
+    </section>
+
+    <section class="page-view page-section studio-page" id="studio">
+      <div class="container">
+        <div class="page-heading"><span class="eyebrow">✦ Worldbuilding laboratory</span>
+          <h1>Planet Studio</h1>
+          <p>Shape an entirely new world. Every detail is yours to imagine.</p>
+        </div>
+        <div class="studio-layout">
+          <div class="planet-stage">
+            <div class="star-field"></div>
+            <div class="planet-rings" id="planet-rings"></div>
+            <div class="planet has-craters" id="planet-preview">
+              <div class="planet-light"></div><span class="crater c1"></span><span class="crater c2"></span><span
+                class="crater c3"></span>
             </div>
-          </form>
-          <p class="apod-status" id="apod-status" aria-live="polite"></p>
-          <div class="api-state" id="apod-feedback" hidden>
-            <strong id="apod-feedback-title">Unable to load this picture</strong>
-            <p id="apod-feedback-message">NASA’s archive could not be reached.</p>
-            <button class="btn-cosmo secondary" id="apod-retry" type="button">Retry</button>
+            <div class="planet-caption"><span>Live preview</span><strong id="preview-name">Aurelia</strong><small
+                id="preview-description">A quiet world drifting at the edge of a violet nebula.</small></div>
           </div>
-          <article class="apod-card" id="apod-card">
-            <button class="apod-image" id="apod-image-button"><img id="apod-image" alt="" /><span class="expand-label">View full image</span></button>
-            <div class="apod-copy"><div class="meta" id="apod-meta"></div><h2 id="apod-title"></h2><div class="rich-description" id="apod-description"></div><a class="media-source" id="apod-source" target="_blank" rel="noopener noreferrer" hidden>View video on NASA ↗</a><button class="btn-cosmo secondary" id="save-apod">♡ Save discovery</button></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="page-view page-section" id="explore">
-        <div class="container">
-          <div class="page-heading"><span class="eyebrow">✦ NASA image archive</span><h1>Explore the Universe</h1><p>Search across galaxies, planets, nebulae, and decades of human discovery.</p></div>
-          <form class="search-bar" id="search-form"><span>⌕</span><input id="search-input" placeholder="Search nebulae, planets, missions..." aria-label="Search NASA images" /><button type="submit">Search the cosmos</button></form>
-          <div class="quick-searches"><span>Try:</span><button data-query="Mars">Mars</button><button data-query="James Webb">James Webb</button><button data-query="Nebula">Nebula</button><button data-query="Apollo">Apollo</button></div>
-          <div class="results-summary" id="results-summary" aria-live="polite"></div>
-          <div class="gallery-grid" id="gallery"></div>
-          <div class="api-state" id="explore-feedback" hidden><strong id="explore-feedback-title"></strong><p id="explore-feedback-message"></p><button class="btn-cosmo secondary" id="explore-retry" type="button">Retry search</button></div>
-          <nav class="pagination-cosmo" id="explore-pagination" aria-label="Explore results pages"></nav>
-        </div>
-      </section>
-
-      <section class="page-view page-section" id="planet-explorer">
-        <div class="container">
-          <div class="page-heading"><span class="eyebrow">✦ Solar system atlas</span><h1>Planet Explorer</h1><p>Meet the eight worlds that orbit our Sun.</p></div>
-          <div id="planet-catalog-view">
-            <div class="planet-search"><span>⌕</span><input id="planet-search-input" type="search" placeholder="Find a planet…" aria-label="Search planets" /></div>
-            <div class="planet-catalog" id="planet-catalog"><div class="gallery-loading">Loading planetary atlas…</div></div>
-            <div class="api-state" id="planet-data-error" hidden><strong>Unable to load planet data</strong><p>Check that planets.json is saved beside index.html.</p><button class="btn-cosmo secondary" id="planet-data-retry">Retry</button></div>
-          </div>
-          <article class="planet-detail-view" id="planet-detail-view" hidden></article>
-        </div>
-      </section>
-
-      <section class="page-view page-section" id="planet-comparison">
-        <div class="container">
-          <div class="page-heading"><span class="eyebrow">✦ Planetary laboratory</span><h1>Planet Comparison</h1><p>Compare the scale and physical properties of two or three worlds.</p></div>
-          <div class="comparison-controls">
-            <label>Planet one<select id="compare-1"></select></label>
-            <label>Planet two<select id="compare-2"></select></label>
-            <label>Planet three <span>Optional</span><select id="compare-3"></select></label>
-            <button class="btn-cosmo" id="compare-button">Compare planets</button>
-            <button class="icon-action" id="compare-reset">Reset</button>
-          </div>
-          <p class="comparison-message" id="comparison-message" aria-live="polite"></p>
-          <div class="comparison-grid" id="comparison-results"></div>
-        </div>
-      </section>
-
-      <section class="page-view page-section studio-page" id="studio">
-        <div class="container">
-          <div class="page-heading"><span class="eyebrow">✦ Worldbuilding laboratory</span><h1>Planet Studio</h1><p>Shape an entirely new world. Every detail is yours to imagine.</p></div>
-          <div class="studio-layout">
-            <div class="planet-stage">
-              <div class="star-field"></div><div class="planet-rings" id="planet-rings"></div>
-              <div class="planet has-craters" id="planet-preview"><div class="planet-light"></div><span class="crater c1"></span><span class="crater c2"></span><span class="crater c3"></span></div>
-              <div class="planet-caption"><span>Live preview</span><strong id="preview-name">Aurelia</strong><small id="preview-description">A quiet world drifting at the edge of a violet nebula.</small></div>
+          <div class="controls-panel">
+            <div class="control-section"><span class="section-number">01</span>
+              <h3>Identity</h3><label>Planet name<input id="planet-name" maxlength="30"
+                  value="Aurelia" /></label><label>Short description<textarea id="planet-description" rows="2"
+                  maxlength="120">A quiet world drifting at the edge of a violet nebula.</textarea></label>
             </div>
-            <div class="controls-panel">
-              <div class="control-section"><span class="section-number">01</span><h3>Identity</h3><label>Planet name<input id="planet-name" maxlength="30" value="Aurelia" /></label><label>Short description<textarea id="planet-description" rows="2" maxlength="120">A quiet world drifting at the edge of a violet nebula.</textarea></label></div>
-              <div class="control-section"><span class="section-number">02</span><h3>Planet color</h3><div class="color-options" id="color-options">
-                <button class="selected" style="background:#9d8cff" data-color="#9d8cff" aria-label="Lavender"></button><button style="background:#4987ff" data-color="#4987ff" aria-label="Blue"></button><button style="background:#e86baa" data-color="#e86baa" aria-label="Pink"></button><button style="background:#51c98b" data-color="#51c98b" aria-label="Green"></button><button style="background:#ee8b4a" data-color="#ee8b4a" aria-label="Orange"></button><button style="background:#7950d8" data-color="#7950d8" aria-label="Purple"></button>
-              </div></div>
-              <div class="control-section sliders"><span class="section-number">03</span><h3>Scale & atmosphere</h3><label><span>Planet size <b id="size-value">74%</b></span><input id="planet-size" type="range" min="45" max="92" value="74" /></label><label><span>Atmosphere <b id="atmosphere-value">45%</b></span><input id="planet-atmosphere" type="range" min="0" max="100" value="45" /></label></div>
-              <div class="control-section"><span class="section-number">04</span><h3>Surface features</h3><div class="feature-grid" id="features">
-                <label class="switch-row"><span>Craters</span><input type="checkbox" data-feature="craters" checked /><i></i></label><label class="switch-row"><span>Rings</span><input type="checkbox" data-feature="rings" checked /><i></i></label><label class="switch-row"><span>Clouds</span><input type="checkbox" data-feature="clouds" /><i></i></label><label class="switch-row"><span>Stripes</span><input type="checkbox" data-feature="stripes" /><i></i></label><label class="switch-row"><span>Glow</span><input type="checkbox" data-feature="glow" checked /><i></i></label>
-              </div></div>
-              <div class="action-row"><button class="icon-action" id="randomize">⤨ Randomize</button><button class="icon-action" id="reset">↻ Reset</button><button class="btn-cosmo" id="save-planet">Save planet</button></div>
+            <div class="control-section"><span class="section-number">02</span>
+              <h3>Planet color</h3>
+              <div class="color-options" id="color-options">
+                <button class="selected" style="background:#9d8cff" data-color="#9d8cff"
+                  aria-label="Lavender"></button><button style="background:#4987ff" data-color="#4987ff"
+                  aria-label="Blue"></button><button style="background:#e86baa" data-color="#e86baa"
+                  aria-label="Pink"></button><button style="background:#51c98b" data-color="#51c98b"
+                  aria-label="Green"></button><button style="background:#ee8b4a" data-color="#ee8b4a"
+                  aria-label="Orange"></button><button style="background:#7950d8" data-color="#7950d8"
+                  aria-label="Purple"></button>
+              </div>
             </div>
+            <div class="control-section sliders"><span class="section-number">03</span>
+              <h3>Scale & atmosphere</h3><label><span>Planet size <b id="size-value">74%</b></span><input
+                  id="planet-size" type="range" min="45" max="92" value="74" /></label><label><span>Atmosphere <b
+                    id="atmosphere-value">45%</b></span><input id="planet-atmosphere" type="range" min="0" max="100"
+                  value="45" /></label>
+            </div>
+            <div class="control-section"><span class="section-number">04</span>
+              <h3>Surface features</h3>
+              <div class="feature-grid" id="features">
+                <label class="switch-row"><span>Craters</span><input type="checkbox" data-feature="craters"
+                    checked /><i></i></label><label class="switch-row"><span>Rings</span><input type="checkbox"
+                    data-feature="rings" checked /><i></i></label><label class="switch-row"><span>Clouds</span><input
+                    type="checkbox" data-feature="clouds" /><i></i></label><label
+                  class="switch-row"><span>Stripes</span><input type="checkbox"
+                    data-feature="stripes" /><i></i></label><label class="switch-row"><span>Glow</span><input
+                    type="checkbox" data-feature="glow" checked /><i></i></label>
+              </div>
+            </div>
+            <div class="action-row"><button class="icon-action" id="randomize">⤨ Randomize</button><button
+                class="icon-action" id="reset">↻ Reset</button><button class="btn-cosmo" id="save-planet">Save
+                planet</button></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="page-view page-section" id="discoveries">
-        <div class="container">
-          <div class="page-heading"><span class="eyebrow">✦ Your personal archive</span><h1>My Discoveries</h1><p>The celestial sights and imagined worlds you chose to keep.</p></div>
-          <div class="collection-heading"><h2>Favorite images</h2><span id="favorite-total">0 saved</span></div><div id="favorite-list"></div>
-          <div class="collection-heading planets-heading"><h2>Created planets</h2><span id="planet-total">0 worlds</span></div><div id="planet-list"></div>
+    <section class="page-view page-section" id="discoveries">
+      <div class="container">
+        <div class="page-heading"><span class="eyebrow">✦ Your personal archive</span>
+          <h1>My Discoveries</h1>
+          <p>The celestial sights and imagined worlds you chose to keep.</p>
         </div>
-      </section>
-    </main>
+        <div class="collection-heading">
+          <h2>Favorite images</h2><span id="favorite-total">0 saved</span>
+        </div>
+        <div id="favorite-list"></div>
+        <div class="collection-heading planets-heading">
+          <h2>Created planets</h2><span id="planet-total">0 worlds</span>
+        </div>
+        <div id="planet-list"></div>
+      </div>
+    </section>
+  </main>
 
-    <footer><div class="container"><div class="brand footer-brand"><span class="brand-orbit"><span></span></span><span>Cosmo<span>View</span></span></div><p>Made for curious minds and cosmic dreamers.</p><span>Powered by NASA Open APIs</span></div></footer>
-    <div class="modal-backdrop-cosmo" id="image-modal" hidden><div class="detail-modal" role="dialog" aria-modal="true"><button class="modal-close" id="modal-close" aria-label="Close">×</button><div class="modal-image"><img id="modal-image" alt="" /></div><div class="modal-copy"><span class="eyebrow" id="modal-date"></span><h2 id="modal-title"></h2><div class="rich-description" id="modal-description"></div><a class="media-source" id="modal-source" target="_blank" rel="noopener noreferrer" hidden>View original on NASA ↗</a><div class="modal-foot"><span id="modal-credit"></span><button class="btn-cosmo secondary" id="modal-save">♡ Save image</button></div></div></div></div>
-    <div class="toast-message" id="toast" hidden></div>
-  </body>
+  <footer class="site-footer">
+    <div class="footer-orbit" aria-hidden="true"><span></span><i></i></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand-column">
+          <button class="brand footer-brand" data-page="home" aria-label="CosmoView home">
+            <span class="brand-orbit"><span></span></span>
+            <span>Cosmo<span>View</span></span>
+          </button>
+          <h2>Made for curious minds<br>and cosmic dreamers.</h2>
+          <p>CosmoView is an independent astronomy and space-exploration platform for discovering NASA imagery,
+            understanding our planetary neighborhood, and imagining new worlds.</p>
+        </div>
+        <div class="footer-links-column">
+          <span class="footer-label">Navigate</span>
+          <nav aria-label="Footer navigation">
+            <button data-page="home">Home</button>
+            <button data-page="apod">Picture of the Day</button>
+            <button data-page="explore">Explore the Universe</button>
+            <button data-page="planet-explorer">Planet Explorer</button>
+            <button data-page="planet-comparison">Planet Comparison</button>
+            <button data-page="studio">Planet Studio</button>
+            <button data-page="discoveries">My Discoveries</button>
+          </nav>
+        </div>
+        <div class="footer-links-column footer-resources">
+          <span class="footer-label">Explore more</span>
+          <nav aria-label="External NASA resources">
+            <a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Official Website
+              <span>↗</span></a>
+            <a href="https://images.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Image and Video Library
+              <span>↗</span></a>
+            <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" rel="noopener noreferrer">NASA Astronomy
+              Picture of the Day <span>↗</span></a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div><strong>Powered by NASA Open APIs.</strong><span>Data and imagery remain credited to NASA and their
+            respective creators. CosmoView is not affiliated with or endorsed by NASA.</span></div>
+        <p>© <span id="footer-year">2026</span> CosmoView</p>
+      </div>
+    </div>
+  </footer>
+  <div class="modal-backdrop-cosmo" id="image-modal" hidden>
+    <div class="detail-modal" role="dialog" aria-modal="true"><button class="modal-close" id="modal-close"
+        aria-label="Close">×</button>
+      <div class="modal-image"><img id="modal-image" alt="" /></div>
+      <div class="modal-copy"><span class="eyebrow" id="modal-date"></span>
+        <h2 id="modal-title"></h2>
+        <div class="rich-description" id="modal-description"></div><a class="media-source" id="modal-source"
+          target="_blank" rel="noopener noreferrer" hidden>View original on NASA ↗</a>
+        <div class="modal-foot"><span id="modal-credit"></span><button class="btn-cosmo secondary" id="modal-save">♡
+            Save image</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="toast-message" id="toast" hidden></div>
+</body>
+
 </html>

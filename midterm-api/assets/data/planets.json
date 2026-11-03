@@ -14,7 +14,11 @@
     "rotationPeriod": "58.6 Earth days",
     "moons": 0,
     "temperatureC": 167,
-    "facts": ["Mercury has no moons or rings.", "A solar day lasts 176 Earth days.", "Water ice exists inside permanently shadowed polar craters."]
+    "facts": [
+      "Mercury has no moons or rings.",
+      "A solar day lasts 176 Earth days.",
+      "Water ice exists inside permanently shadowed polar craters."
+    ]
   },
   {
     "id": "venus",
@@ -31,7 +35,11 @@
     "rotationPeriod": "243 Earth days, retrograde",
     "moons": 0,
     "temperatureC": 464,
-    "facts": ["Venus rotates opposite most planets.", "Its surface pressure is about 92 times Earth’s.", "A day on Venus is longer than its year."]
+    "facts": [
+      "Venus rotates opposite most planets.",
+      "Its surface pressure is about 92 times Earth’s.",
+      "A day on Venus is longer than its year."
+    ]
   },
   {
     "id": "earth",
@@ -48,7 +56,11 @@
     "rotationPeriod": "23.93 hours",
     "moons": 1,
     "temperatureC": 15,
-    "facts": ["About 71% of Earth is covered by ocean.", "Earth’s atmosphere is mostly nitrogen and oxygen.", "Its Moon helps stabilize the planet’s axial tilt."]
+    "facts": [
+      "About 71% of Earth is covered by ocean.",
+      "Earth’s atmosphere is mostly nitrogen and oxygen.",
+      "Its Moon helps stabilize the planet’s axial tilt."
+    ]
   },
   {
     "id": "mars",
@@ -65,7 +77,11 @@
     "rotationPeriod": "24.62 hours",
     "moons": 2,
     "temperatureC": -65,
-    "facts": ["Olympus Mons is the largest volcano in the Solar System.", "Mars has two small moons: Phobos and Deimos.", "Its red color comes from iron minerals oxidizing in the soil."]
+    "facts": [
+      "Olympus Mons is the largest volcano in the Solar System.",
+      "Mars has two small moons: Phobos and Deimos.",
+      "Its red color comes from iron minerals oxidizing in the soil."
+    ]
   },
   {
     "id": "jupiter",
@@ -82,7 +98,11 @@
     "rotationPeriod": "9.93 hours",
     "moons": 95,
     "temperatureC": -110,
-    "facts": ["Jupiter has the shortest day of any planet.", "Ganymede is the Solar System’s largest moon.", "Its magnetic field is the strongest of any planet."]
+    "facts": [
+      "Jupiter has the shortest day of any planet.",
+      "Ganymede is the Solar System’s largest moon.",
+      "Its magnetic field is the strongest of any planet."
+    ]
   },
   {
     "id": "saturn",
@@ -99,7 +119,11 @@
     "rotationPeriod": "10.7 hours",
     "moons": 274,
     "temperatureC": -140,
-    "facts": ["Saturn is less dense than water.", "Its rings are broad but remarkably thin.", "Titan is larger than the planet Mercury."]
+    "facts": [
+      "Saturn is less dense than water.",
+      "Its rings are broad but remarkably thin.",
+      "Titan is larger than the planet Mercury."
+    ]
   },
   {
     "id": "uranus",
@@ -116,7 +140,11 @@
     "rotationPeriod": "17.24 hours, retrograde",
     "moons": 28,
     "temperatureC": -195,
-    "facts": ["Uranus has 13 known rings.", "It was the first planet discovered with a telescope.", "Its magnetic field is sharply tilted and off-center."]
+    "facts": [
+      "Uranus has 13 known rings.",
+      "It was the first planet discovered with a telescope.",
+      "Its magnetic field is sharply tilted and off-center."
+    ]
   },
   {
     "id": "neptune",
@@ -133,6 +161,10 @@
     "rotationPeriod": "16.11 hours",
     "moons": 16,
     "temperatureC": -200,
-    "facts": ["Neptune was predicted mathematically before it was observed.", "Its winds can exceed 2,000 kilometers per hour.", "Triton has active nitrogen geysers."]
+    "facts": [
+      "Neptune was predicted mathematically before it was observed.",
+      "Its winds can exceed 2,000 kilometers per hour.",
+      "Triton has active nitrogen geysers."
+    ]
   }
 ]
