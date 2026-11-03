@@ -1360,7 +1360,6 @@ input[type="range"] {
 .editorial-grid { display: grid; grid-template-columns: 0.65fr 1fr 1.6fr; gap: 55px; align-items: center; }
 .editorial-grid > .section-index { align-self: start; }
 .editorial-copy p, .section-title-row > p { color: #92909d; font-size: 13px; line-height: 1.8; max-width: 420px; }
-.home-intro .section-index small { white-space: nowrap; }
 .home-intro .editorial-grid { grid-template-columns: 1fr 1.6fr; }
 .editorial-copy h2 { margin: 18px 0 28px; }
 .editorial-link {
